@@ -7,8 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "prepare": "husky install",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "husky install"
+    "lint-staged": "lint-staged --config lint-staged.js",
+    "prettier": "prettier src -check",
+    "typescript": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "react": "18.0.0",
