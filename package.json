@@ -9,7 +9,7 @@
     "test": "jest",
     "prepare": "husky install",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prettier": "prettier src -c",
+    "prettier": "prettier -c",
     "typescript": "tsc --project tsconfig.json --noEmit"
   },
   "lint-staged": {
