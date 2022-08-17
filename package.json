@@ -9,9 +9,16 @@
     "test": "jest",
     "prepare": "husky install",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint-staged": "lint-staged --config lint-staged.js",
-    "prettier": "prettier src -check",
+    "prettier": "prettier src -c",
     "typescript": "tsc --project tsconfig.json --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "react-scripts test --bail --watchAll=false --findRelatedTests --passWithNoTests",
+      "tsc-files --noEmit"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,js}": "prettier --write"
   },
   "dependencies": {
     "react": "18.0.0",
